@@ -1,4 +1,4 @@
-package se.dackebro.temperatur;
+package se.dackebro.temperature;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,9 +30,9 @@ public class Upload {
     private int interval;
 
     //The first line where data is located
-    private static final int FIRST_LINE = 14;
+    private static final int FIRST_LINE = 18;
     //The second line where data is located
-    private static final int SECOND_LINE = 19;
+    private static final int SECOND_LINE = 27;
     //Holds all sysout data
     private ArrayList<String> sysoutData;
     //Holds true if the upload loop already is running
@@ -143,8 +143,8 @@ public class Upload {
      */
     private String[] read() {
 
-        //To store the lines read (guess we don't have more than 40 lines)
-        ArrayList<String> lines = new ArrayList<String>(40);
+        //To store the lines read (guess we don't have more than 45 lines)
+        ArrayList<String> lines = new ArrayList<String>(45);
 
         try {
             //Create an object of the file to read
@@ -167,7 +167,7 @@ public class Upload {
             //Close the reader
             fileReader.close();
         //Catch errors (i.e. file not found)
-        } catch (IOException e) {
+        } catch (final IOException e) {
             addToPrint(e.getMessage());
         }
 
@@ -237,7 +237,7 @@ public class Upload {
             //To get current time
             Calendar cal = Calendar.getInstance();
             cal.getTime();
-            SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
             addToPrint("Uppdaterat " + sdf.format(cal.getTime()));
         }

@@ -1,4 +1,4 @@
-package se.dackebro.temperatur;
+package se.dackebro.temperature;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -51,7 +51,7 @@ public class Gui extends JFrame {
         labelPath = new JLabel("Sökväg till last.htm:");
         labelHash = new JLabel("Hash kod:");
         labelInterval = new JLabel("Intervall (s):");
-        textPath = new JTextField("F:\\Temperatur.nu\\Värden", 20);
+        textPath = new JTextField("G:\\Temperatur.nu\\Värden", 20);
         textHash = new JTextField("0c4e88a2b432146501c63d9182d9aaf9", 20);
         textInterval = new JTextField("60", 20);
         sysout = new JLabel("");
@@ -91,5 +91,4 @@ public class Gui extends JFrame {
         add(refresh);
         add(sysout);
     }
-
 }

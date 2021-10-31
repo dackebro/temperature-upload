@@ -1,4 +1,4 @@
-package se.dackebro.temperatur;
+package se.dackebro.temperature;
 
 import javax.swing.*;
 
